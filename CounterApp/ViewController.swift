@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var counterLabel: UILabel!
+    var count=0
+    @IBAction func incrementTapped(_ sender: UIButton) {
+        count = count+1
+        counterLabel.text="\(count)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        counterLabel.text="\(count)"
     }
-
-
 }
 
