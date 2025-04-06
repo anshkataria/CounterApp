@@ -18,16 +18,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func incrementTapped(_ sender: UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        
         count = count+1
         animateCountChange()
+        
     }
     
     @IBAction func decrementTapped(_ sender: UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        
         count=count-1;
         animateCountChange()
+       
     }
     
     @IBAction func resetTapped(_ sender: UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        
         count=0;
         animateCountChange()
     }
