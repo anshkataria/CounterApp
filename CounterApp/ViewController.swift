@@ -10,29 +10,32 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var counterLabel: UILabel!
-    var count=0
+    var count=0{
+        didSet{
+            counterLabel.text="\(count)"
+            UserDefaults.standard.set(count, forKey:"counterValue")
+        }
+    }
     
     @IBAction func incrementTapped(_ sender: UIButton) {
         count = count+1
-        updateCounterLabel()
+        
     }
     
     @IBAction func decrementTapped(_ sender: UIButton) {
         count=count-1;
-        updateCounterLabel()
+        
     }
     
     @IBAction func resetTapped(_ sender: UIButton) {
         count=0;
-        updateCounterLabel()
+        
     }
     
-    func updateCounterLabel(){
-        counterLabel.text="\(count)"
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateCounterLabel()
+        count = UserDefaults.standard.integer(forKey: "counterValue")
     }
 }
 
