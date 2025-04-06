@@ -4,14 +4,15 @@ A simple iOS app built using UIKit and Storyboards that lets users increment a c
 
 ## Features
 
-- User-friendly interface with a label and button
-- Tap to increment the counter
+- Tap to **increment** the counter
+- **Decrement** button to decrease the count
+- **Reset** button to start over
+- **Saves your count** even after closing the app (using UserDefaults)
 - Clean UI built using Storyboard
-- First beginner project to learn iOS development and GitHub integration
 
 ## Screenshots
 
-*(Add simulator screenshots here later)*
+_(simulator screenshot)_
 
 ## How to Run
 
