@@ -19,20 +19,27 @@ class ViewController: UIViewController {
     
     @IBAction func incrementTapped(_ sender: UIButton) {
         count = count+1
-        
+        animateCountChange()
     }
     
     @IBAction func decrementTapped(_ sender: UIButton) {
         count=count-1;
-        
+        animateCountChange()
     }
     
     @IBAction func resetTapped(_ sender: UIButton) {
         count=0;
-        
+        animateCountChange()
     }
-    
-    
+    func animateCountChange(){
+        UIView.animate(withDuration: 0.15, animations: {self.counterLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        })
+        { _ in
+            UIView.animate(withDuration: 0.15){
+                self.counterLabel.transform = CGAffineTransform.identity
+            }
+            }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         count = UserDefaults.standard.integer(forKey: "counterValue")
