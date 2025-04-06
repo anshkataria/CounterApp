@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,6 +25,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTo-th-wSz">
                                 <rect key="frame" x="134.66666666666666" y="477.66666666666669" width="123.66666666666666" height="42.000000000000057"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Increment">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
@@ -32,13 +34,48 @@
                                     <action selector="incrementTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PaO-jJ-6Hx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArY-ya-wpg">
+                                <rect key="frame" x="129.66666666666666" y="549.66666666666663" width="133.99999999999997" height="42"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Decrement">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="decrementTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VgI-GC-heV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rT9-6I-Uu4">
+                                <rect key="frame" x="156.33333333333334" y="621.66666666666663" width="80.666666666666657" height="42"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Rf-c4-BnZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap, Track, Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5n-nE-l0n">
+                                <rect key="frame" x="81" y="172.66666666666666" width="231" height="36"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
                             <constraint firstItem="TTo-th-wSz" firstAttribute="top" secondItem="Oo0-Vz-uxD" secondAttribute="bottom" constant="30" id="BxL-Vg-5PD"/>
+                            <constraint firstItem="ArY-ya-wpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FIa-23-wSa"/>
+                            <constraint firstItem="rT9-6I-Uu4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JJK-S0-DNm"/>
+                            <constraint firstItem="Oo0-Vz-uxD" firstAttribute="top" secondItem="x5n-nE-l0n" secondAttribute="bottom" constant="195.66999999999999" id="KFs-gF-MbT"/>
                             <constraint firstItem="Oo0-Vz-uxD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Od4-VL-Y2R"/>
+                            <constraint firstItem="ArY-ya-wpg" firstAttribute="top" secondItem="TTo-th-wSz" secondAttribute="bottom" constant="30" id="Vqv-0Z-9pO"/>
+                            <constraint firstItem="rT9-6I-Uu4" firstAttribute="top" secondItem="ArY-ya-wpg" secondAttribute="bottom" constant="30" id="Zq1-Az-aMj"/>
                             <constraint firstItem="TTo-th-wSz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b3y-rd-xMz"/>
+                            <constraint firstItem="x5n-nE-l0n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dNm-T3-U5G"/>
                             <constraint firstItem="Oo0-Vz-uxD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yMj-3a-OsM"/>
                         </constraints>
                     </view>
@@ -48,12 +85,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
