@@ -12,7 +12,7 @@ A simple iOS app built using UIKit and Storyboards that lets users increment a c
 
 ## Screenshots
 
-![CounterApp Screenshot](Desktop/counterApp.png)
+![CounterApp Screenshot](/Users/anshkataria/Desktop/counterApp.png)
 
 ## How to Run
 
