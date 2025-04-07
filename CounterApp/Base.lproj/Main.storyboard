@@ -99,12 +99,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K60-RD-lNk">
+                                <rect key="frame" x="163.33333333333334" y="685.66666666666663" width="66.666666666666657" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Share">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MrM-pY-40i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="K60-RD-lNk" firstAttribute="top" secondItem="rT9-6I-Uu4" secondAttribute="bottom" constant="22" id="4vF-QL-Swr"/>
                             <constraint firstItem="TTo-th-wSz" firstAttribute="top" secondItem="Oo0-Vz-uxD" secondAttribute="bottom" constant="30" id="BxL-Vg-5PD"/>
                             <constraint firstItem="ArY-ya-wpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FIa-23-wSa"/>
+                            <constraint firstItem="K60-RD-lNk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSy-cX-eld"/>
                             <constraint firstItem="rT9-6I-Uu4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JJK-S0-DNm"/>
                             <constraint firstItem="Oo0-Vz-uxD" firstAttribute="top" secondItem="x5n-nE-l0n" secondAttribute="bottom" constant="195.66999999999999" id="KFs-gF-MbT"/>
                             <constraint firstItem="Oo0-Vz-uxD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Od4-VL-Y2R"/>
@@ -136,6 +150,9 @@
         </systemColor>
         <systemColor name="tableBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

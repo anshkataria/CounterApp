@@ -60,6 +60,22 @@ class ViewController: UIViewController {
         animateCountChange()
         playSound()
     }
+    
+    @IBAction func shareButtonPressed(_ sender: UIButton) {
+        shareScreenshot()
+        playSound()
+        let generator = UIImpactFeedbackGenerator(style:.light)
+        generator.impactOccurred()
+    }
+    func shareScreenshot(){
+        let renderer = UIGraphicsImageRenderer(size:view.bounds.size)
+        let image = renderer.image { ctx in
+            view.drawHierarchy(in: view.bounds, afterScreenUpdates:true)
+        }
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView=self.view // for ipad support
+        present(activityVC,animated:true,completion: nil)
+    }
     func animateCountChange(){
         UIView.animate(withDuration: 0.15, animations: {self.counterLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         })
